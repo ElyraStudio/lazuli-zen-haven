@@ -1,95 +1,116 @@
 import { motion } from "framer-motion";
+import { MessageCircle } from "lucide-react";
 import facialImg from "@/assets/facial.jpg";
 import reikiImg from "@/assets/reiki.jpg";
 import massageImg from "@/assets/massage.jpg";
 import handsImg from "@/assets/hands-feet.jpg";
 
+const WHATSAPP_URL = "https://wa.me/5551999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20no%20Espaço%20Lazuli.";
+
 const services = [
   {
     title: "Estética Facial",
+    tagline: "Rejuvenescimento & Autoestima",
     description:
-      "Revitalize, hidrate e rejuvenesça sua pele com protocolos personalizados. Tratamentos que devolvem luminosidade, firmeza e autoestima — porque cuidar do rosto é celebrar quem você é.",
+      "Revitalize, hidrate e rejuvenesça sua pele com protocolos personalizados. Tratamentos que devolvem luminosidade, firmeza e autoestima.",
     image: facialImg,
-    alt: "Tratamento facial no Espaço Lazuli",
+    alt: "Tratamento de estética facial",
+    colorClass: "bg-orange",
+    borderClass: "border-orange/30",
   },
   {
-    title: "Reiki & Terapias Energéticas",
+    title: "Massoterapia",
+    tagline: "Alívio de Dores & Tensões",
     description:
-      "Reconecte corpo, mente e energia. Nossas sessões de Reiki proporcionam alívio emocional, clareza mental e um profundo estado de paz interior — um encontro com sua essência.",
-    image: reikiImg,
-    alt: "Sessão de Reiki no Espaço Lazuli",
-  },
-  {
-    title: "Massagem Terapêutica",
-    description:
-      "Alívio de dores, tensões e cansaço acumulado. Técnicas precisas de massagem relaxante e drenagem linfática que renovam seu corpo e devolvem leveza ao seu dia a dia.",
+      "Massagem clínica e relaxante com técnicas precisas. Alívio de dores, tensões e cansaço acumulado — renovação completa do corpo.",
     image: massageImg,
-    alt: "Massagem terapêutica no Espaço Lazuli",
+    alt: "Sessão de massoterapia",
+    colorClass: "bg-green",
+    borderClass: "border-green/30",
   },
   {
-    title: "Cuidados com Mãos & Pés",
+    title: "Terapias Integrativas",
+    tagline: "Equilíbrio Emocional & Energético",
     description:
-      "Hidratação profunda, esfoliação suave e um toque relaxante que transforma cada detalhe. Mãos e pés merecem atenção — e aqui, cada gesto é feito com carinho.",
+      "Reiki, terapias energéticas e práticas integrativas que reconectam corpo, mente e energia. Um encontro com sua essência.",
+    image: reikiImg,
+    alt: "Terapia integrativa e Reiki",
+    colorClass: "bg-marsala",
+    borderClass: "border-marsala/30",
+  },
+  {
+    title: "Mãos & Pés",
+    tagline: "Relaxamento & Cuidado Completo",
+    description:
+      "Hidratação profunda, esfoliação suave e um toque relaxante que transforma cada detalhe. Cuidado feito com carinho.",
     image: handsImg,
-    alt: "Cuidados com mãos e pés no Espaço Lazuli",
+    alt: "Cuidados com mãos e pés",
+    colorClass: "bg-primary",
+    borderClass: "border-primary/30",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="servicos" className="py-24 md:py-32 bg-background">
-      <div className="container max-w-6xl mx-auto px-6">
+    <section id="servicos" className="py-16 md:py-28 bg-secondary">
+      <div className="container max-w-6xl mx-auto px-5">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-14"
         >
-          <p className="text-gold font-body text-sm tracking-[0.25em] uppercase mb-4">
+          <p className="font-accent text-accent text-lg md:text-xl mb-3">
             O que oferecemos
           </p>
-          <h2 className="font-heading text-4xl md:text-5xl font-semibold text-foreground mb-6">
+          <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-4">
             Nossos Serviços
           </h2>
-          <p className="text-muted-foreground font-body font-light max-w-xl mx-auto leading-relaxed">
-            Cada tratamento é uma experiência pensada para cuidar de você por inteiro — corpo, mente e alma.
+          <p className="text-muted-foreground font-body font-light max-w-lg mx-auto leading-relaxed">
+            Cada tratamento é uma experiência de cuidado integral — corpo, mente e alma.
           </p>
         </motion.div>
 
-        <div className="space-y-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className={`flex flex-col ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-10 md:gap-16 items-center`}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7, delay: index * 0.1 }}
+              className={`rounded-2xl overflow-hidden bg-background border ${service.borderClass} shadow-sm hover:shadow-md transition-shadow duration-300`}
             >
-              <div className="w-full md:w-1/2">
-                <div className="relative overflow-hidden rounded-sm aspect-square">
-                  <img
-                    src={service.image}
-                    alt={service.alt}
-                    loading="lazy"
-                    width={640}
-                    height={640}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-lazuli-dark/10" />
+              <div className="relative aspect-[4/3]">
+                <img
+                  src={service.image}
+                  alt={service.alt}
+                  loading="lazy"
+                  width={640}
+                  height={480}
+                  className="w-full h-full object-cover"
+                />
+                <div className={`absolute top-4 left-4 ${service.colorClass} text-primary-foreground font-body text-xs font-semibold tracking-wide uppercase px-3 py-1.5 rounded-full`}>
+                  {service.tagline}
                 </div>
               </div>
-              <div className="w-full md:w-1/2 space-y-5">
-                <div className="w-12 h-px bg-gold" />
-                <h3 className="font-heading text-3xl md:text-4xl font-semibold text-foreground">
+              <div className="p-6 space-y-3">
+                <h3 className="font-heading text-2xl font-semibold text-foreground">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground font-body font-light leading-relaxed text-base">
+                <p className="text-muted-foreground font-body font-light text-sm leading-relaxed">
                   {service.description}
                 </p>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-green font-body font-semibold text-sm hover:underline"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Agendar este serviço
+                </a>
               </div>
             </motion.div>
           ))}

@@ -52,6 +52,18 @@ export default {
           light: "hsl(var(--lazuli-light))",
           dark: "hsl(var(--lazuli-dark))",
         },
+        green: {
+          DEFAULT: "hsl(var(--green))",
+          light: "hsl(var(--green-light))",
+        },
+        orange: {
+          DEFAULT: "hsl(var(--orange))",
+          light: "hsl(var(--orange-light))",
+        },
+        marsala: {
+          DEFAULT: "hsl(var(--marsala))",
+          light: "hsl(var(--marsala-light))",
+        },
         cream: {
           DEFAULT: "hsl(var(--cream))",
           dark: "hsl(var(--cream-dark))",
@@ -60,7 +72,6 @@ export default {
           DEFAULT: "hsl(var(--gold))",
           light: "hsl(var(--gold-light))",
         },
-        sage: "hsl(var(--sage))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -73,8 +84,9 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Cormorant Garamond', 'serif'],
-        body: ['Raleway', 'sans-serif'],
+        heading: ['Playfair Display', 'serif'],
+        body: ['Nunito', 'sans-serif'],
+        accent: ['Dancing Script', 'cursive'],
       },
       borderRadius: {
         lg: "var(--radius)",
