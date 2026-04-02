@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Nunito:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,46 +7,53 @@
 @layer base {
   :root {
     --background: 40 33% 97%;
-    --foreground: 220 20% 20%;
+    --foreground: 245 33% 20%;
 
     --card: 40 30% 95%;
-    --card-foreground: 220 20% 20%;
+    --card-foreground: 245 33% 20%;
 
     --popover: 40 33% 97%;
-    --popover-foreground: 220 20% 20%;
+    --popover-foreground: 245 33% 20%;
 
-    --primary: 220 56% 45%;
+    --primary: 243 34% 39%;
     --primary-foreground: 40 33% 97%;
 
-    --secondary: 40 25% 90%;
-    --secondary-foreground: 220 20% 25%;
+    --secondary: 40 25% 92%;
+    --secondary-foreground: 243 34% 25%;
 
-    --muted: 40 20% 92%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 243 15% 45%;
 
-    --accent: 35 60% 60%;
-    --accent-foreground: 220 20% 15%;
+    --accent: 28 55% 55%;
+    --accent-foreground: 40 33% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
-    --ring: 220 56% 45%;
+    --border: 243 15% 88%;
+    --input: 243 15% 88%;
+    --ring: 243 34% 39%;
 
     --radius: 0.75rem;
 
-    --lazuli: 220 56% 45%;
-    --lazuli-light: 220 40% 70%;
-    --lazuli-dark: 220 60% 30%;
+    /* Brand colors */
+    --lazuli: 243 34% 39%;
+    --lazuli-light: 243 25% 60%;
+    --lazuli-dark: 243 40% 25%;
+    --green: 168 55% 32%;
+    --green-light: 168 40% 45%;
+    --orange: 28 55% 55%;
+    --orange-light: 28 45% 70%;
+    --marsala: 330 52% 35%;
+    --marsala-light: 330 40% 50%;
     --cream: 40 33% 97%;
     --cream-dark: 40 25% 90%;
     --gold: 35 60% 60%;
     --gold-light: 35 50% 75%;
-    --sage: 150 20% 55%;
 
-    --font-heading: 'Cormorant Garamond', serif;
-    --font-body: 'Raleway', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Nunito', sans-serif;
+    --font-accent: 'Dancing Script', cursive;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -65,7 +72,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground;
     font-family: var(--font-body);
   }
 
@@ -80,5 +87,8 @@
   }
   .font-body {
     font-family: var(--font-body);
+  }
+  .font-accent {
+    font-family: var(--font-accent);
   }
 }
