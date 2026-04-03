@@ -75,7 +75,7 @@ const LocationSection = () => {
           >
             <iframe
               title="Localização Espaço Lazuli"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.5!2d-51.1!3d-29.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRua+Esp%C3%ADrito+Santo%2C+317+-+Parque+Esp%C3%ADrito+Santo%2C+Cachoeirinha+-+RS!5e0!3m2!1spt-BR!2sbr!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864.5958109710898!2d-51.06990213034404!3d-29.910867135964303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197380d5883297%3A0xce4e797800cdb1!2sEspa%C3%A7o%20Lazuli%20%7C%20Reiki%20%7C%20Massagem%20em%20Gravata%C3%AD%20%7C%20Est%C3%A9tica%20%7C%20Massoterapeuta!5e0!3m2!1spt-BR!2sbr!4v1775176809332!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0 }}
