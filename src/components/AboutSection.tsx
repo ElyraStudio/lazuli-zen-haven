@@ -1,86 +1,112 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const AboutSection = () => {
+const AboutSection = (): JSX.Element => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
-    <section id="sobre" className="py-20 md:py-32 bg-background">
-      <div className="container max-w-6xl mx-auto px-5">
+    <section
+      id="sobre"
+      className="w-full py-20 px-5 bg-gradient-to-b from-[#f9f9f9] to-white scroll-mt-24"
+    >
+      <div className="max-w-5xl mx-auto">
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        {/* TITLE */}
+        <h2 className="text-3xl md:text-4xl font-heading text-black mb-6 text-center">
+          Sobre o Espaço Lazuli
+        </h2>
 
-          {/* TEXTO */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6 text-center md:text-left"
-          >
-
-            <p className="font-accent text-accent text-lg">
-              Sobre o Espaço
-            </p>
-
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground leading-tight">
-              Cuidado que vai além da estética
-            </h2>
-
-            <p className="text-muted-foreground font-body font-light leading-relaxed">
-              À frente do Espaço Lazuli está <span className="font-medium text-foreground">Camila Vargas</span>, 
-              massoterapeuta naturopata com mais de 8 anos de experiência na área da saúde.
-            </p>
-
-            <p className="text-muted-foreground font-body font-light leading-relaxed">
-              Seu trabalho une massagem clínica, estética e terapias integrativas, 
-              com um olhar profundo sobre o corpo como um todo — respeitando a fisiologia 
-              e a individualidade de cada cliente.
-            </p>
-
-            <p className="text-muted-foreground font-body font-light leading-relaxed">
-              Cada atendimento é pensado de forma personalizada, utilizando o toque como 
-              ferramenta de reabilitação, equilíbrio e bem-estar real.
-            </p>
-
-          </motion.div>
-
-          {/* BLOCO DE DESTAQUE */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-secondary rounded-2xl p-8 md:p-10 shadow-sm space-y-5"
-          >
-
-            <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground">
-              Um refúgio terapêutico
-            </h3>
-
-            <p className="text-muted-foreground font-body font-light leading-relaxed text-sm md:text-base">
-              Após anos de experiência e aperfeiçoamento, o Espaço Lazuli foi criado 
-              como um ambiente pensado para acolher, cuidar e restaurar.
-            </p>
-
-            <p className="text-muted-foreground font-body font-light leading-relaxed text-sm md:text-base">
-              Mais do que um consultório, é um espaço onde cada detalhe foi planejado 
-              para proporcionar conforto, conexão e equilíbrio.
-            </p>
-
-            {/* DIFERENCIAL */}
-            <div className="pt-4 border-t border-border space-y-2">
-              <p className="text-sm text-foreground font-medium">
-                • Atendimento humanizado
-              </p>
-              <p className="text-sm text-foreground font-medium">
-                • Técnicas personalizadas
-              </p>
-              <p className="text-sm text-foreground font-medium">
-                • Visão holística do corpo
-              </p>
-            </div>
-
-          </motion.div>
-
+        {/* INTRO CARD */}
+        <div className="bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6 border border-black/5">
+          <p className="text-black/70 text-base md:text-lg leading-relaxed text-center">
+            À frente do Espaço Lazuli está <strong className="text-[#464184]">Camila Vargas</strong>,
+            Massoterapeuta Naturopata com 8 anos de experiência na área da saúde,
+            unindo massagem clínica, estética e terapias integrativas para promover
+            equilíbrio real entre corpo e mente.
+          </p>
         </div>
+
+        {/* BOTÃO */}
+        <div className="flex justify-center">
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="text-sm font-semibold text-[#464184] hover:underline mb-6"
+          >
+            {expanded ? "Ver menos" : "Ler mais"}
+          </button>
+        </div>
+
+        {/* CONTEÚDO */}
+        <AnimatePresence>
+          {expanded && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.4 }}
+              className="flex flex-col gap-5"
+            >
+
+              {/* CAMILA */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-black/5">
+                <h3 className="text-lg font-semibold text-[#464184] mb-2">
+                  Profissional responsável
+                </h3>
+                <p className="text-black/70 leading-relaxed">
+                  Especialista em uma visão holística do corpo, Camila acredita que
+                  saúde e beleza são reflexos de um organismo em harmonia. Seus
+                  atendimentos são personalizados, respeitando a fisiologia de cada
+                  cliente, utilizando o toque como ferramenta de reabilitação e
+                  equilíbrio.
+                </p>
+              </div>
+
+              {/* ESPAÇO */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-black/5">
+                <h3 className="text-lg font-semibold text-[#257d70] mb-2">
+                  Um refúgio terapêutico
+                </h3>
+                <p className="text-black/70 leading-relaxed">
+                  O Espaço Lazuli foi planejado para ser mais do que um consultório.
+                  É um ambiente de acolhimento, cura e conexão, onde cada detalhe
+                  reflete uma abordagem integrativa e humanizada.
+                </p>
+              </div>
+
+              {/* PRÁTICAS */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-black/5">
+                <h3 className="text-lg font-semibold text-[#cb794b] mb-3">
+                  Vivências e práticas
+                </h3>
+
+                <ul className="space-y-3 text-black/70">
+                  <li>
+                    <strong>Colaboração profissional:</strong> sublocação para
+                    especialistas da saúde com a mesma ética de cuidado.
+                  </li>
+                  <li>
+                    <strong>Práticas coletivas:</strong> yoga, meditações em grupo,
+                    constelação familiar e outras vivências terapêuticas.
+                  </li>
+                  <li>
+                    <strong>Sagrado feminino:</strong> encontros voltados ao
+                    fortalecimento e reconexão da essência feminina.
+                  </li>
+                </ul>
+              </div>
+
+              {/* FECHAMENTO */}
+              <div className="bg-[#464184]/5 rounded-2xl p-6 border border-[#464184]/10">
+                <p className="text-black/80 leading-relaxed text-center">
+                  No Espaço Lazuli, o atendimento individual e as práticas em grupo
+                  se unem para criar uma experiência completa de bem-estar, onde
+                  físico, mental, emocional e espiritual encontram equilíbrio.
+                </p>
+              </div>
+
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

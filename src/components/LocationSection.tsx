@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock, MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5551999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20no%20Espaço%20Lazuli.";
+const WHATSAPP_URL = "https://wa.me/5551980395642?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20no%20Espaço%20Lazuli.";
 
 const LocationSection = () => {
   return (
-    <section id="localizacao" className="py-16 md:py-28 bg-background">
+    <section id="localizacao" className="py-16 md:py-28 bg-background scroll-mt-24">
       <div className="container max-w-5xl mx-auto px-5">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -92,3 +92,6 @@
     font-family: var(--font-accent);
   }
 }
+html {
+  scroll-behavior: smooth;
+}

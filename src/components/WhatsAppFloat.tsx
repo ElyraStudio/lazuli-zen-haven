@@ -1,7 +1,11 @@
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const WHATSAPP_URL = "https://wa.me/5551999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20no%20Espaço%20Lazuli.";
+const phone = "5551980395642";
+
+const message = "Olá! Gostaria de agendar uma sessão no Espaço Lazuli.";
+
+const WHATSAPP_URL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
 const WhatsAppFloat = () => {
   return (

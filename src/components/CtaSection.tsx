@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5551999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20no%20Espaço%20Lazuli.";
+const WHATSAPP_URL = "https://wa.me/5551980395642?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20no%20Espaço%20Lazuli.";
 
 const CtaSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-lazuli-dark relative overflow-hidden">
-
+    <section className="py-20 md:py-32 bg-lazuli-dark relative overflow-hidden scroll-mt-24" id="contato" >
+   
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-1/4 w-80 h-80 rounded-full bg-gold blur-3xl" />

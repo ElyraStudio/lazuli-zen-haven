@@ -7,7 +7,7 @@ import massageImg from "@/assets/massage.jpg";
 import handsImg from "@/assets/hands-feet.jpg";
 
 const WHATSAPP_URL =
-  "https://wa.me/5551999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20no%20Espaço%20Lazuli.";
+  "https://wa.me/5551980395642?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20no%20Espaço%20Lazuli.";
 
 const services = [
   {
