@@ -1,3 +1,16 @@
-# Welcome to your Lovable project
+# Espaço Lazuli Landing Page
 
-TODO: Document your project here
+Landing page profissional desenvolvida para o Espaço Lazuli.
+
+## Tecnologias
+- React
+- TypeScript
+- TailwindCSS
+- Framer Motion
+
+## Funcionalidades
+- Navbar com animação e blur
+- Modal de serviços
+- CTA otimizado para conversão
+- Design responsivo mobile-first
+  
