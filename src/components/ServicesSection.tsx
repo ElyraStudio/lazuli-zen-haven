@@ -4,19 +4,18 @@ import { MessageCircle } from "lucide-react";
 import facialImg from "@/assets/facial.jpg";
 import reikiImg from "@/assets/reiki.jpg";
 import massageImg from "@/assets/massage.jpg";
-import handsImg from "@/assets/hands-feet.jpg";
 
 const WHATSAPP_URL =
   "https://wa.me/5551980395642?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20no%20Espaço%20Lazuli.";
 
 const services = [
   {
-    title: "Estética Facial",
-    tagline: "Rejuvenescimento & Autoestima",
+    title: "Estética Natural",
+    tagline: "Beleza & Produtos Naturais",
     description:
-      "Revitalize, hidrate e rejuvenesça sua pele com protocolos personalizados. Tratamentos que devolvem luminosidade, firmeza e autoestima.",
+      "Tratamentos faciais personalizados utilizando apenas produtos naturais, promovendo saúde da pele, luminosidade e equilíbrio da beleza de forma consciente.",
     image: facialImg,
-    alt: "Tratamento de estética facial",
+    alt: "Tratamento de estética natural",
     colorClass: "bg-orange",
     borderClass: "border-orange/30",
   },
@@ -34,28 +33,16 @@ const services = [
     title: "Terapias Integrativas",
     tagline: "Equilíbrio Emocional & Energético",
     description:
-      "Reiki, terapias energéticas e práticas integrativas que reconectam corpo, mente e energia. Um encontro com sua essência.",
+      "Reiki e práticas integrativas que reconectam corpo, mente e energia. Um encontro com sua essência e cuidado individualizado.",
     image: reikiImg,
     alt: "Terapia integrativa e Reiki",
     colorClass: "bg-marsala",
     borderClass: "border-marsala/30",
   },
-  {
-    title: "Mãos & Pés",
-    tagline: "Relaxamento & Cuidado Completo",
-    description:
-      "Hidratação profunda, esfoliação suave e um toque relaxante que transforma cada detalhe. Cuidado feito com carinho.",
-    image: handsImg,
-    alt: "Cuidados com mãos e pés",
-    colorClass: "bg-primary",
-    borderClass: "border-primary/30",
-  },
 ];
 
 const ServicesSection = () => {
-  const [selectedService, setSelectedService] = useState<
-    (typeof services)[0] | null
-  >(null);
+  const [selectedService, setSelectedService] = useState<null | typeof services[0]>(null);
 
   return (
     <section id="servicos" className="py-20 md:py-28 bg-secondary">
@@ -82,8 +69,8 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        {/* GRID 2x2 MOBILE */}
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6">
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -101,7 +88,6 @@ const ServicesSection = () => {
                   alt={service.alt}
                   className="w-full h-full object-cover"
                 />
-
                 <div
                   className={`absolute top-2 left-2 ${service.colorClass} text-white text-[10px] md:text-xs px-2 py-1 rounded-full`}
                 >
@@ -114,10 +100,7 @@ const ServicesSection = () => {
                 <h3 className="font-heading text-sm md:text-xl font-semibold text-foreground leading-tight">
                   {service.title}
                 </h3>
-
-                <span className="text-xs text-primary font-semibold">
-                  Ver mais
-                </span>
+                <span className="text-xs text-primary font-semibold">Ver mais</span>
               </div>
             </motion.div>
           ))}
@@ -148,7 +131,6 @@ const ServicesSection = () => {
                     alt={selectedService.alt}
                     className="w-full h-full object-cover"
                   />
-
                   <div
                     className={`absolute top-3 left-3 ${selectedService.colorClass} text-white text-xs px-3 py-1 rounded-full`}
                   >
@@ -161,7 +143,6 @@ const ServicesSection = () => {
                   <h3 className="text-xl font-heading font-semibold text-foreground">
                     {selectedService.title}
                   </h3>
-
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {selectedService.description}
                   </p>
@@ -189,7 +170,6 @@ const ServicesSection = () => {
             </motion.div>
           )}
         </AnimatePresence>
-
       </div>
     </section>
   );

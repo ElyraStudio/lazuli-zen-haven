@@ -21,7 +21,7 @@ const AboutSection = (): JSX.Element => {
           <p className="text-black/70 text-base md:text-lg leading-relaxed text-center">
             À frente do Espaço Lazuli está <strong className="text-[#464184]">Camila Vargas</strong>,
             Massoterapeuta Naturopata com 8 anos de experiência na área da saúde,
-            unindo massagem clínica, estética e terapias integrativas para promover
+            unindo massagem clínica, estética natural e terapias integrativas para promover
             equilíbrio real entre corpo e mente.
           </p>
         </div>
@@ -73,7 +73,7 @@ const AboutSection = (): JSX.Element => {
                 </p>
               </div>
 
-              {/* PRÁTICAS */}
+              {/* VIVÊNCIAS */}
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-black/5">
                 <h3 className="text-lg font-semibold text-[#cb794b] mb-3">
                   Vivências e práticas
@@ -81,16 +81,8 @@ const AboutSection = (): JSX.Element => {
 
                 <ul className="space-y-3 text-black/70">
                   <li>
-                    <strong>Colaboração profissional:</strong> sublocação para
-                    especialistas da saúde com a mesma ética de cuidado.
-                  </li>
-                  <li>
-                    <strong>Práticas coletivas:</strong> yoga, meditações em grupo,
-                    constelação familiar e outras vivências terapêuticas.
-                  </li>
-                  <li>
-                    <strong>Sagrado feminino:</strong> encontros voltados ao
-                    fortalecimento e reconexão da essência feminina.
+                    <strong>Colaboração profissional:</strong> espaço disponível para
+                    outros especialistas realizarem seus atendimentos de forma independente.
                   </li>
                 </ul>
               </div>
@@ -98,9 +90,9 @@ const AboutSection = (): JSX.Element => {
               {/* FECHAMENTO */}
               <div className="bg-[#464184]/5 rounded-2xl p-6 border border-[#464184]/10">
                 <p className="text-black/80 leading-relaxed text-center">
-                  No Espaço Lazuli, o atendimento individual e as práticas em grupo
-                  se unem para criar uma experiência completa de bem-estar, onde
-                  físico, mental, emocional e espiritual encontram equilíbrio.
+                  No Espaço Lazuli, o atendimento individual se une ao cuidado humanizado
+                  para criar uma experiência completa de bem-estar, onde físico, mental,
+                  emocional e espiritual encontram equilíbrio.
                 </p>
               </div>
 

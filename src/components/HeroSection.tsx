@@ -40,13 +40,15 @@ const HeroSection = () => {
 
         {/* TITLE */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight"
-        >
-          Espaço Lazuli
-        </motion.h1>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.2 }}
+  className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight text-center"
+>
+  <span className="text-gold-light">Espaço</span>{" "}
+  <span>Lazuli </span>
+  <span className="text-gold-light">Estética Natural e Terapias Integrativas</span>
+</motion.h1>
 
         {/* LINE */}
         <motion.div
