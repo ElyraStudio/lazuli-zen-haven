@@ -19,10 +19,7 @@ const AboutSection = (): JSX.Element => {
         {/* INTRO CARD */}
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6 border border-black/5">
           <p className="text-black/70 text-base md:text-lg leading-relaxed text-center">
-            À frente do Espaço Lazuli está <strong className="text-[#464184]">Camila Vargas</strong>,
-            Massoterapeuta Naturopata com 8 anos de experiência na área da saúde,
-            unindo massagem clínica, estética natural e terapias integrativas para promover
-            equilíbrio real entre corpo e mente.
+           À frente do Espaço Lazuli...unindo massagens clínica e estética à Estética Natural e as Terapias Integrativas, promovendo equilíbrio à todas as dimensões do ser humano: físico, mental, emocional e espiritual,  proporcionando saúde, beleza e bem-estar aos seus pacientes.
           </p>
         </div>
 
