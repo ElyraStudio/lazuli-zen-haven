@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import elaImg from "@/assets/ela.jpg";
 
 const AboutSection = (): JSX.Element => {
   const [expanded, setExpanded] = useState(false);
@@ -16,10 +17,26 @@ const AboutSection = (): JSX.Element => {
           Sobre o Espaço Lazuli
         </h2>
 
+        {/* FOTO */}
+        <div className="mb-6 flex justify-center">
+          <div className="relative w-full max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg">
+            <div className="aspect-[4/5]">
+              <img
+                src={elaImg}
+                alt="Profissional do Espaço Lazuli"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            {/* overlay suave pra dar profundidade */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+          </div>
+        </div>
+
         {/* INTRO CARD */}
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6 border border-black/5">
           <p className="text-black/70 text-base md:text-lg leading-relaxed text-center">
-           À frente do Espaço Lazuli...unindo massagens clínica e estética à Estética Natural e as Terapias Integrativas, promovendo equilíbrio à todas as dimensões do ser humano: físico, mental, emocional e espiritual,  proporcionando saúde, beleza e bem-estar aos seus pacientes.
+            À frente do Espaço Lazuli... unindo massagens clínica e estética à Estética Natural e as Terapias Integrativas, promovendo equilíbrio à todas as dimensões do ser humano: físico, mental, emocional e espiritual, proporcionando saúde, beleza e bem-estar aos seus pacientes.
           </p>
         </div>
 
